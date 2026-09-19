@@ -72,7 +72,7 @@ export default async function handler(req, res) {
         'anthropic-version': '2023-06-01',
       },
       body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001', // コスト重視。精度を上げたい場合はclaude-sonnet-5に変更可
+        model: 'claude-sonnet-5', // 2026/9/19：haiku→sonnetに変更（月間使用量が極小のためコストは問題にならず、見送り傾向など一段深い判断が増えたため精度優先に切替）
         max_tokens: 700,
         system: KNOWLEDGE_BASE_SYSTEM_PROMPT,
         messages: [{ role: 'user', content: prompt }],
